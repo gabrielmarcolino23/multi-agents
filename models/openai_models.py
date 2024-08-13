@@ -6,11 +6,6 @@ FINE_TUNED_MODELS = {
         "default": "gpt-4o-mini-2024-07-18",
         "version_2": "gpt-4o-mini-finetuned-5678"
     },
-    "gpt-3.5-turbo": {
-        "default": "gpt-3.5-turbo-finetuned-8765",
-        "custom_v1": "gpt-3.5-turbo-finetuned-4321"
-    },
-    # Adicione mais modelos e versões conforme necessário
 }
 
 class OpenAIModel:
