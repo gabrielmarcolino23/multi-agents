@@ -1,15 +1,23 @@
-from langgraph import Graph, Node
+from tasks.promptVerifier_task import create_planner_task
+from agents.promptVerifier import PlannerAgent
+from states.state import AgentGraphState
 from crewai import Crew
 
-from states.state import AgentGraphState
+'''
 
-def copy_ai_workflow():
+def marketing_campaign_flow():
     # Inicializar o estado compartilhado
     state = AgentGraphState()
 
-    # Criar os agentes
-  
+    # Criar o PlannerAgent
+    planner_agent = PlannerAgent(state=state, model='gpt-4', server='openai', temperature=0.7)
 
-# Exemplo de uso no main.py
-if __name__ == "__main__":
-    copy_ai_workflow()
+    # Criar a tarefa do PlannerAgent
+    planner_task = create_planner_task(planner_agent)
+
+    # Criar a equipe com a tarefa
+    crew = Crew(agents=[planner_agent], tasks=[planner_task])
+
+    # Executar a equipe
+    crew.execute()
+'''

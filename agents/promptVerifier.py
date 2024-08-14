@@ -1,8 +1,10 @@
 from models.openai_models import get_open_ai
 from states.state import AgentGraphState
 
+from crewai import Agent
 
-class PromptVerifier:
+
+class promptVerifier:
      def __init__(self, state: AgentGraphState, model=None, server=None, temperature=0, tools=None):
         self.state = state
         self.model = model
