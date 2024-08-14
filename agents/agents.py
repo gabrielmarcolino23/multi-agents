@@ -94,6 +94,6 @@ crew = Crew(
 resultados = crew.kickoff()
 
 # Exibir os resultados
-print("######################")
+print("######################teste")
 for resultado in resultados:
     print(resultado)
